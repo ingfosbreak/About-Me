@@ -1,0 +1,363 @@
+
+
+  /* font */
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bacasime Antique', serif;
+}
+
+html, body {
+  /* height: 100vh; */
+  background-image: linear-gradient(to right,#373535, #202020);
+  
+ 
+}
+
+/* parallax */
+
+.parallax{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.parallax img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    /* filter: drop-shadow(0 0 0.5rem black); */
+
+    will-change: transform;
+   
+
+}
+
+.parallax div
+{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* transform: translateY(20%); */
+  /* transform: rotate(-2.5deg); */
+  transform: rotate3d(1, 1, 1, -2.5deg);
+  margin-top: 50px;
+  font-size: 13em;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: white;
+  filter: drop-shadow(0 0 3.5rem black);
+
+  will-change: transform;
+}
+
+#asa-back {
+  filter: brightness(0.5);
+}
+
+
+
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  padding: 0 4em;
+  margin-top: 1em;
+  color: white;
+  font-size: 2em;
+  
+  
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.navbar-left {
+  font-size: 1.5em;
+}
+.navbar-right {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+  font-size: 0.6em;
+
+}
+
+a {
+  text-decoration: none;
+  color: white; 
+}
+
+/* main */
+.main {
+  display: flex;
+  width: 100%;
+  padding: 0 8em;
+  margin-top: 2em;
+  
+  
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.main-left {
+  flex: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+
+}
+.main-left > p{
+  width: 80%;
+  font-size: 2em;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  color: white;
+}
+
+.main-left > #sub-text {
+  
+  font-size: 0.8em;
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+}
+
+.main-right {
+  flex: 65%;
+  height: auto;
+  flex-wrap: wrap;
+  transition-duration: 500ms;
+}
+
+.main-right:hover {
+  filter: drop-shadow(0 0 3.5rem black);
+  transition-duration: 500ms;
+
+}
+
+.childimg {
+  background-image: url(https://cdn.discordapp.com/attachments/1076489187638915133/1123912684774113350/357163114_1384325135684956_9054991808246827999_n.jpg);
+  width: 100%;
+  height: 600px; 
+  background-size: cover;
+  background-position: 5%;
+  background-repeat: no-repeat;
+  transition-duration: 500ms;
+  filter: saturate(0);
+}
+
+.childimg:hover {
+  background: url(https://media.discordapp.net/attachments/882157549925830656/1124023732889993338/ezgif-4-c8edfb9f12.gif?width=507&height=676) no-repeat;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: 5%;
+  transition-duration: 500ms;
+  filter: saturate(0.5);
+  
+}
+
+.main-right > img {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  filter: saturate(0);
+}
+
+/* lang */
+
+.program-lang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 8em;
+  padding: 0 8em;
+  gap: 50px;
+  
+  
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.program-lang-text {
+  font-size: 1em;
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+}
+
+.lang-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 30%;
+  justify-content: space-between;
+  /* background-color: aqua; */
+}
+.lang-item {
+  flex: 1;
+  width: auto;
+  height: 60px;
+  color: white;
+  border-style: solid;
+  border-color: #a5a5a5;
+  border-width: 3px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  transition-duration: 500ms;
+
+
+}
+.lang-item:hover {
+  filter: drop-shadow(0 0 0.5em white);
+  transition-duration: 500ms;
+}
+.lang-item > img {
+  object-fit: contain;
+  height: 100%;
+  border-radius: 5px;
+  filter: saturate(0.5);
+}
+
+.lang-item > p {
+  margin-right: 3px;
+}
+
+.study {
+  display: flex;
+  /* flex-direction: column; */
+  position: relative;
+  width: 100%;
+  height: 600px; 
+  justify-content: center;
+  align-items: center;
+  padding: 0 8em;
+  margin-top: 40px;
+  
+  
+}
+
+.study-text {
+  margin-top: 150px;
+  font-size: 1.3em;
+  padding: 0 8em;
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+}
+
+
+/* 
+.ku-logo {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100px;
+  align-items: center;
+  position: absolute;
+  margin-right: 25px;
+
+}
+
+.ku-logo > img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%; 
+} */
+
+.pointing {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  
+  background-image: url(https://media.discordapp.net/attachments/882157549925830656/1125010001925255239/pointing.png);
+}
+
+.footer {
+  margin-top: 100px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  padding: 0 8em;
+  justify-content: space-between;
+  align-items: center;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .main {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .navbar-right {
+      display: none;
+    }
+
+    .main-right > .childimg {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      filter: saturate(0);
+    }
+
+    .program-lang {
+      padding: 0 3em;
+    }
+
+    .ku-logo {
+      height: 45px;
+    }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
